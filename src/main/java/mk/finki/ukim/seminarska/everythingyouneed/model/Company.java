@@ -21,6 +21,15 @@ public class Company {
     @OneToMany(mappedBy = "Company")
     private List<Category> categories;
 
-    @OneToMany
-    private List<Product> products;
+    //@OneToMany
+   // private List<Product> products; // mesto da chuvame lista od site produkti od edna kompanija
+    //mozhime za sekoj produkt da chuvame ushte eden atribut koj kje bidi Kompanija
+
+    public Company(){}
+    public Company(String name, String address, String description, List<Category> categories) {
+        this.name = name;
+        this.address = address;
+        this.description = description;
+        this.categories = categories;
+    }
 }
