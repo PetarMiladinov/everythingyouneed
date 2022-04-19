@@ -1,11 +1,11 @@
 package mk.finki.ukim.seminarska.everythingyouneed.service;
 
-import mk.finki.ukim.seminarska.everythingyouneed.model.Product;
-import mk.finki.ukim.seminarska.everythingyouneed.model.dto.ProductDto;
 
 import java.util.List;
 import java.util.Optional;
 
+import mk.finki.ukim.seminarska.everythingyouneed.model.Product;
+import mk.finki.ukim.seminarska.everythingyouneed.model.dto.ProductDto;
 
 public interface ProductService {
     List<Product> listAll();

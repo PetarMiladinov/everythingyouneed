@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="postgres@localhost">
+<dataSource name="everythingyouneed@localhost">
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.20">
     <root id="1">
-      <ServerVersion>14 rc 1</ServerVersion>
+      <ServerVersion>14.1</ServerVersion>
       <DateStyle>dmy</DateStyle>
       <TimeZones>true ACDT
 true ACSST
@@ -692,6 +692,7 @@ false Pacific/Guadalcanal
 false Pacific/Guam
 false Pacific/Honolulu
 false Pacific/Johnston
+false Pacific/Kanton
 false Pacific/Kiritimati
 false Pacific/Kosrae
 false Pacific/Kwajalein
@@ -784,57 +785,74 @@ false YEKT
 false Z
 false Zulu
 </TimeZones>
-      <StartupTime>1648137903</StartupTime>
+      <StartupTime>1650359083</StartupTime>
     </root>
-    <database id="2" parent="1" name="postgres">
+    <database id="2" parent="1" name="e-shop">
+      <ObjectId>32780</ObjectId>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="3" parent="1" name="e-shopAud">
+      <ObjectId>16394</ObjectId>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="4" parent="1" name="e-shopEMT">
+      <ObjectId>40972</ObjectId>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="5" parent="1" name="e-shopPetar">
+      <ObjectId>16395</ObjectId>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="6" parent="1" name="everythingyouneed">
+      <ObjectId>49164</ObjectId>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>1202</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Relations>sequence|table|49165|49166|1
+sequence|table|49172|49173|1
+sequence|table|49181|49182|1
+</Relations>
+    </database>
+    <database id="7" parent="1" name="postgres">
       <ObjectId>13754</ObjectId>
       <Comment>default administrative connection database</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>751</IntrospectionStateNumber>
-      <Current>1</Current>
-      <Relations>sequence|table|16404|16405|1
-sequence|table|16414|16415|1
-sequence|table|16438|16439|1
-sequence|table|16462|16463|1
-sequence|table|16490|16491|1
-sequence|table|16504|16505|1
-sequence|table|16520|16521|1
-</Relations>
+      <IntrospectionStateNumber>1191</IntrospectionStateNumber>
     </database>
-    <role id="3" parent="1" name="pg_database_owner">
+    <role id="8" parent="1" name="pg_database_owner">
       <ObjectId>6171</ObjectId>
     </role>
-    <role id="4" parent="1" name="pg_execute_server_program">
+    <role id="9" parent="1" name="pg_execute_server_program">
       <ObjectId>4571</ObjectId>
     </role>
-    <role id="5" parent="1" name="pg_monitor">
+    <role id="10" parent="1" name="pg_monitor">
       <ObjectId>3373</ObjectId>
     </role>
-    <role id="6" parent="1" name="pg_read_all_data">
+    <role id="11" parent="1" name="pg_read_all_data">
       <ObjectId>6181</ObjectId>
     </role>
-    <role id="7" parent="1" name="pg_read_all_settings">
+    <role id="12" parent="1" name="pg_read_all_settings">
       <ObjectId>3374</ObjectId>
     </role>
-    <role id="8" parent="1" name="pg_read_all_stats">
+    <role id="13" parent="1" name="pg_read_all_stats">
       <ObjectId>3375</ObjectId>
     </role>
-    <role id="9" parent="1" name="pg_read_server_files">
+    <role id="14" parent="1" name="pg_read_server_files">
       <ObjectId>4569</ObjectId>
     </role>
-    <role id="10" parent="1" name="pg_signal_backend">
+    <role id="15" parent="1" name="pg_signal_backend">
       <ObjectId>4200</ObjectId>
     </role>
-    <role id="11" parent="1" name="pg_stat_scan_tables">
+    <role id="16" parent="1" name="pg_stat_scan_tables">
       <ObjectId>3377</ObjectId>
     </role>
-    <role id="12" parent="1" name="pg_write_all_data">
+    <role id="17" parent="1" name="pg_write_all_data">
       <ObjectId>6182</ObjectId>
     </role>
-    <role id="13" parent="1" name="pg_write_server_files">
+    <role id="18" parent="1" name="pg_write_server_files">
       <ObjectId>4570</ObjectId>
     </role>
-    <role id="14" parent="1" name="postgres">
+    <role id="19" parent="1" name="postgres">
       <ObjectId>10</ObjectId>
       <SuperRole>1</SuperRole>
       <CreateDb>1</CreateDb>
@@ -843,17 +861,17 @@ sequence|table|16520|16521|1
       <Replication>1</Replication>
       <BypassRls>1</BypassRls>
     </role>
-    <tablespace id="15" parent="1" name="pg_default">
+    <tablespace id="20" parent="1" name="pg_default">
       <ObjectId>1663</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1</StateNumber>
     </tablespace>
-    <tablespace id="16" parent="1" name="pg_global">
+    <tablespace id="21" parent="1" name="pg_global">
       <ObjectId>1664</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1</StateNumber>
     </tablespace>
-    <schema id="17" parent="2" name="information_schema">
+    <schema id="22" parent="6" name="information_schema">
       <ObjectId>13388</ObjectId>
       <Acl>10=UC/10
 U/10
@@ -861,7 +879,7 @@ U/10
       <StateNumber>533</StateNumber>
       <Owner>postgres</Owner>
     </schema>
-    <schema id="18" parent="2" name="pg_catalog">
+    <schema id="23" parent="6" name="pg_catalog">
       <ObjectId>11</ObjectId>
       <Comment>system catalog schema</Comment>
       <Acl>10=UC/10
@@ -870,13 +888,7 @@ U/10
       <StateNumber>526</StateNumber>
       <Owner>postgres</Owner>
     </schema>
-    <schema id="19" parent="2" name="pgagent">
-      <ObjectId>16394</ObjectId>
-      <Comment>pgAgent system tables</Comment>
-      <StateNumber>735</StateNumber>
-      <Owner>postgres</Owner>
-    </schema>
-    <schema id="20" parent="2" name="public">
+    <schema id="24" parent="6" name="public">
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <Acl>10=UC/10
@@ -884,26 +896,10 @@ UC/10
 </Acl>
       <StateNumber>527</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>752</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1203</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
-    <extension id="21" parent="2" name="adminpack">
-      <ObjectId>16384</ObjectId>
-      <Comment>administrative functions for PostgreSQL</Comment>
-      <StateNumber>734</StateNumber>
-      <Version>2.1</Version>
-      <SchemaName>pg_catalog</SchemaName>
-      <SchemaId>11</SchemaId>
-    </extension>
-    <extension id="22" parent="2" name="pgagent">
-      <ObjectId>16395</ObjectId>
-      <Comment>A PostgreSQL job scheduler</Comment>
-      <StateNumber>735</StateNumber>
-      <Version>4.2</Version>
-      <SchemaName>pgagent</SchemaName>
-      <SchemaId>16394</SchemaId>
-    </extension>
-    <extension id="23" parent="2" name="plpgsql">
+    <extension id="25" parent="6" name="plpgsql">
       <ObjectId>13740</ObjectId>
       <Comment>PL/pgSQL procedural language</Comment>
       <StateNumber>687</StateNumber>
@@ -911,21 +907,21 @@ UC/10
       <SchemaName>pg_catalog</SchemaName>
       <SchemaId>11</SchemaId>
     </extension>
-    <language id="24" parent="2" name="c">
+    <language id="26" parent="6" name="c">
       <ObjectId>13</ObjectId>
       <Comment>dynamically-loaded C functions</Comment>
       <StateNumber>1</StateNumber>
       <ValidatorName>fmgr_c_validator</ValidatorName>
       <ValidatorSchema>pg_catalog</ValidatorSchema>
     </language>
-    <language id="25" parent="2" name="internal">
+    <language id="27" parent="6" name="internal">
       <ObjectId>12</ObjectId>
       <Comment>built-in functions</Comment>
       <StateNumber>1</StateNumber>
       <ValidatorName>fmgr_internal_validator</ValidatorName>
       <ValidatorSchema>pg_catalog</ValidatorSchema>
     </language>
-    <language id="26" parent="2" name="plpgsql">
+    <language id="28" parent="6" name="plpgsql">
       <ObjectId>13744</ObjectId>
       <Comment>PL/pgSQL procedural language</Comment>
       <StateNumber>687</StateNumber>
@@ -937,7 +933,7 @@ UC/10
       <ValidatorName>plpgsql_validator</ValidatorName>
       <ValidatorSchema>pg_catalog</ValidatorSchema>
     </language>
-    <language id="27" parent="2" name="sql">
+    <language id="29" parent="6" name="sql">
       <ObjectId>14</ObjectId>
       <Comment>SQL-language functions</Comment>
       <StateNumber>1</StateNumber>
@@ -945,14 +941,14 @@ UC/10
       <ValidatorName>fmgr_sql_validator</ValidatorName>
       <ValidatorSchema>pg_catalog</ValidatorSchema>
     </language>
-    <access-method id="28" parent="2" name="heap">
+    <access-method id="30" parent="6" name="heap">
       <ObjectId>2</ObjectId>
       <Comment>heap table access method</Comment>
       <StateNumber>1</StateNumber>
       <Handler>pg_catalog.heap_tableam_handler</Handler>
       <HandlerId>3</HandlerId>
     </access-method>
-    <access-method id="29" parent="2" name="btree">
+    <access-method id="31" parent="6" name="btree">
       <ObjectId>403</ObjectId>
       <Comment>b-tree index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -960,7 +956,7 @@ UC/10
       <HandlerId>330</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="30" parent="2" name="hash">
+    <access-method id="32" parent="6" name="hash">
       <ObjectId>405</ObjectId>
       <Comment>hash index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -968,7 +964,7 @@ UC/10
       <HandlerId>331</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="31" parent="2" name="gist">
+    <access-method id="33" parent="6" name="gist">
       <ObjectId>783</ObjectId>
       <Comment>GiST index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -976,7 +972,7 @@ UC/10
       <HandlerId>332</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="32" parent="2" name="gin">
+    <access-method id="34" parent="6" name="gin">
       <ObjectId>2742</ObjectId>
       <Comment>GIN index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -984,7 +980,7 @@ UC/10
       <HandlerId>333</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="33" parent="2" name="spgist">
+    <access-method id="35" parent="6" name="spgist">
       <ObjectId>4000</ObjectId>
       <Comment>SP-GiST index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -992,7 +988,7 @@ UC/10
       <HandlerId>334</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="34" parent="2" name="brin">
+    <access-method id="36" parent="6" name="brin">
       <ObjectId>3580</ObjectId>
       <Comment>block range index (BRIN) access method</Comment>
       <StateNumber>1</StateNumber>
@@ -1000,5 +996,211 @@ UC/10
       <HandlerId>335</HandlerId>
       <Type>index</Type>
     </access-method>
+    <sequence id="37" parent="24" name="category_id_seq">
+      <ObjectId>49165</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1196</StateNumber>
+      <DataType>bigint|0s</DataType>
+    </sequence>
+    <sequence id="38" parent="24" name="company_id_seq">
+      <ObjectId>49172</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1197</StateNumber>
+      <DataType>bigint|0s</DataType>
+    </sequence>
+    <sequence id="39" parent="24" name="product_id_seq">
+      <ObjectId>49181</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1198</StateNumber>
+      <DataType>bigint|0s</DataType>
+    </sequence>
+    <table id="40" parent="24" name="category">
+      <ObjectId>49166</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1199</StateNumber>
+    </table>
+    <table id="41" parent="24" name="company">
+      <ObjectId>49173</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1199</StateNumber>
+    </table>
+    <table id="42" parent="24" name="product">
+      <ObjectId>49182</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1200</StateNumber>
+    </table>
+    <column id="43" parent="40" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1196</StateNumber>
+      <DefaultExpression>nextval(&apos;category_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="44" parent="40" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1196</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="45" parent="40" name="category_pkey">
+      <ObjectId>49170</ObjectId>
+      <StateNumber>1196</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationIds>0</CollationIds>
+      <ClassIds>3124</ClassIds>
+    </index>
+    <key id="46" parent="40" name="category_pkey">
+      <ObjectId>49171</ObjectId>
+      <StateNumber>1196</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>category_pkey</UnderlyingIndexName>
+    </key>
+    <column id="47" parent="41" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1197</StateNumber>
+      <DefaultExpression>nextval(&apos;company_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="48" parent="41" name="address">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1197</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="49" parent="41" name="description">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1197</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="50" parent="41" name="name">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1197</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="51" parent="41" name="category_id">
+      <Position>5</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>1197</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="52" parent="41" name="company_pkey">
+      <ObjectId>49179</ObjectId>
+      <StateNumber>1197</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationIds>0</CollationIds>
+      <ClassIds>3124</ClassIds>
+    </index>
+    <key id="53" parent="41" name="company_pkey">
+      <ObjectId>49180</ObjectId>
+      <StateNumber>1197</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>company_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="54" parent="41" name="fkgiofojdjsu3j242xw21jfpuap">
+      <ObjectId>49190</ObjectId>
+      <StateNumber>1199</StateNumber>
+      <ColNames>category_id</ColNames>
+      <RefTableId>49166</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>category</RefTableName>
+      <RefKeyName>category_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="55" parent="42" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1198</StateNumber>
+      <DefaultExpression>nextval(&apos;product_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="56" parent="42" name="description">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1198</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="57" parent="42" name="name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1198</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="58" parent="42" name="price">
+      <Position>4</Position>
+      <DataType>real|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1198</StateNumber>
+      <TypeId>700</TypeId>
+    </column>
+    <column id="59" parent="42" name="quantity">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1198</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="60" parent="42" name="category_id">
+      <Position>6</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>1198</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="61" parent="42" name="company_id">
+      <Position>7</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>1198</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="62" parent="42" name="product_pkey">
+      <ObjectId>49188</ObjectId>
+      <StateNumber>1198</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationIds>0</CollationIds>
+      <ClassIds>3124</ClassIds>
+    </index>
+    <key id="63" parent="42" name="product_pkey">
+      <ObjectId>49189</ObjectId>
+      <StateNumber>1198</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>product_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="64" parent="42" name="fk1mtsbur82frn64de7balymq9s">
+      <ObjectId>49195</ObjectId>
+      <StateNumber>1200</StateNumber>
+      <ColNames>category_id</ColNames>
+      <RefTableId>49166</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>category</RefTableName>
+      <RefKeyName>category_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="65" parent="42" name="fkghawd5rtv8ok565nwpdyyuto9">
+      <ObjectId>49200</ObjectId>
+      <StateNumber>1201</StateNumber>
+      <ColNames>company_id</ColNames>
+      <RefTableId>49173</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>company</RefTableName>
+      <RefKeyName>company_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>
