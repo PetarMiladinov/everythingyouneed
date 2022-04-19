@@ -1,0 +1,1 @@
+Dto - Data Transfer Objects ni se potrebni za komunikacija od i kon nekoja react aplikacija
