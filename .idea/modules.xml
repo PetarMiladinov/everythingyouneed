@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/WP-Seminarska.iml" filepath="$PROJECT_DIR$/WP-Seminarska.iml" />
       <module fileurl="file://$PROJECT_DIR$/web/everythingyouneed.iml" filepath="$PROJECT_DIR$/web/everythingyouneed.iml" />
     </modules>
   </component>
