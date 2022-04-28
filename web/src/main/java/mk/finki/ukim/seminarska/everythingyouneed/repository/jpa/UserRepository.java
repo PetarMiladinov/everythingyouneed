@@ -20,6 +20,7 @@ public interface UserRepository extends JpaRepository<User,String> {
     @Query("select u from User u")
     List<User> loadAll();
 
+    Optional<User> findByUsernameAndPassword(String username,String password);
 
   Optional<User> findByUsername(String username);
 //    @Query(value = "select * " +
