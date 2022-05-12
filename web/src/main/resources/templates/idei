@@ -1,0 +1,25 @@
+Pop-up za shopping cart, lista od selektirani produkti
+
+Home so card da se napravat reklamite
+
+
+ROLES: BUYERS AND SELLERS
+
+Buyers(moze da se iskoriste user model)
+    -Home page with ads of all services,
+    -Shopping cart service
+
+
+Sellers
+    -Can add ads on home page
+        -Ads can be products or services (forms)
+        -If ad i a service, you can call or select date and time on the site
+    -Maps
+    -You can open sellers account and see all ads from the seller
+        -Account has picture, description and you can leave rating
+
+Ads(Moze da se iskoriste Product model)
+    -Can be edited
+    -Cards with desc, basic info and link to seller,
+    -button to add to cart
+
